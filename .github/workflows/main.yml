@@ -16,6 +16,11 @@ jobs:
         with:
           dbname: test
           commands: |
+            # This is only for testing purposes since
+            # the demo database already has tables
+            rails db:reset_schema
+            echo 'Reset the database successfully.'
+
             rails db:migrate
             echo 'Forward migration completed successfully.'
 
